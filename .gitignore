@@ -1,0 +1,7 @@
+copy/
+output/
+*.ogv
+*.mp4
+*.avi
+.vscode
+*.pyc

@@ -1,0 +1,5 @@
+need to change per class:
+
+1. total class count: config file -> [region] class, final convolutional -> class*5 + 25
+2. class name file
+3. labeling, training
