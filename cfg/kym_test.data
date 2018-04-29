@@ -1,7 +1,7 @@
 classes= 9
-train  = ../dataset_testo/dataset_test/list_txt/train_set.txt
-train_valid = ../dataset_test/dataset_test/list_txt/train_valid.txt
-valid  = ../dataset_test/dataset_test/list_txt/test.txt
+train  = ../dataset_test/list_txt/train_set.txt
+train_valid = ../dataset_test/list_txt/train_valid.txt
+valid  = ../dataset_test/list_txt/test.txt
 names = ../dataset_test/cfg/test-kym.names
 backup = backup1
 
