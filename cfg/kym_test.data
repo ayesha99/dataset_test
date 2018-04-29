@@ -1,5 +1,5 @@
 classes= 2
-train  = /home/kym/Downloads/git_repo/dataset_test/list_txt/train.txt
+train  = /home/kym/Downloads/git_repo/dataset_test/list_txt/train_set.txt
 train_valid = /home/kym/Downloads/git_repo/dataset_test/list_txt/train_valid.txt
 valid  = /home/kym/Downloads/git_repo/dataset_test/list_txt/test.txt
 names = /home/kym/Downloads/git_repo/dataset_test/cfg/test-kym.names

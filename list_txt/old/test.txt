@@ -1,0 +1,2 @@
+/home/kym/Downloads/git_repo/dataset_test/copy/smpl037.jpg
+/home/kym/Downloads/git_repo/dataset_test/copy/smpl038.jpg

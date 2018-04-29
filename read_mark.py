@@ -1,6 +1,7 @@
 import os
 import re
 
+# copy marked image
 
 files = os.listdir('./output/')
 jpg_pattern = re.compile(".*.jpg")
@@ -25,7 +26,7 @@ for txt in txt_list:
             pass
 
 from shutil import copy2    
-target_folder='copy'
+target_folder='copy/'
 for pair in img_txt_pair:
     copy2(pair[0],target_folder)
     copy2(pair[1],target_folder)

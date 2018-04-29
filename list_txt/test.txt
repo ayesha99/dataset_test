@@ -1,2 +1,7 @@
-/home/kym/Downloads/git_repo/dataset_test/copy/smpl037.jpg
-/home/kym/Downloads/git_repo/dataset_test/copy/smpl038.jpg
+/home/kym/Downloads/git_repo/dataset_test/data/dataset1/sample_180429_04099.jpg
+/home/kym/Downloads/git_repo/dataset_test/data/dataset1/smpl004.jpg
+/home/kym/Downloads/git_repo/dataset_test/data/dataset1/smpl038.jpg
+/home/kym/Downloads/git_repo/dataset_test/data/dataset1/smpl037.jpg
+/home/kym/Downloads/git_repo/dataset_test/data/dataset1/sample_180429_01999.jpg
+/home/kym/Downloads/git_repo/dataset_test/data/dataset1/smpl007.jpg
+/home/kym/Downloads/git_repo/dataset_test/data/dataset1/sample_180429_05099.jpg
