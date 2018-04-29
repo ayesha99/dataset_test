@@ -49,7 +49,7 @@ def prepare_dataset_txt(dataset_dir):
     test_set_cnt = min(int(test_set_ratio*len(img_list)),10)
     test_set = img_list[0:test_set_cnt-1]
     train_set = img_list[test_set_cnt:]
-    valid_set_cnt = min(int(test_set_ratio*len(train_set)),10)
+    valid_set_cnt = min(len(train_set),10)
     valid_set = train_set[0:valid_set_cnt-1]
     test_set_path = os.path.join(dataset_dir,"test.txt")
     valid_set_path = os.path.join(dataset_dir,"train_valid.txt")
