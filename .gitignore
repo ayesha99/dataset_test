@@ -5,4 +5,5 @@ output/
 *.avi
 .vscode
 *.pyc
+crawl_img/
 data/
