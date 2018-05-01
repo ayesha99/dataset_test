@@ -2,7 +2,7 @@ import os
 import re
 
 # copy marked image
-dir = './data/0429_original/'
+dir = './data/0501_original/'
 files = os.listdir(dir)
 jpg_pattern = re.compile(".*.jpg")
 txt_pattern = re.compile(".*.txt")
@@ -26,7 +26,9 @@ for txt in txt_list:
             pass
 
 from shutil import copy2    
-target_folder='data/0429_train/'
+target_folder='data/0501_train/'
+if( not os.path.exists(target_folder)):
+    os.mkdir(target_folder)
 for pair in img_txt_pair:
     copy2(pair[0],target_folder)
     copy2(pair[1],target_folder)

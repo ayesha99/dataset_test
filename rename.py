@@ -1,6 +1,42 @@
 import os
 
-files = os.listdir('./output/')
+target_folder = './data/0501_train/'
+files = os.listdir(target_folder)
 
-for i,file in enumerate(files):
-    os.rename(os.path.join( './output/',file),os.path.join('./output/','smpl_180429_{:03d}.jpg'.format(i)))
+def onlyImg():
+    for i,file in enumerate(files):
+
+        original = os.path.join(target_folder,file)
+        fname,ext = os.path.splitext(original)
+        new = os.path.join(target_folder,'smpl_180501_{:03d}'+ext).format(i)
+        os.rename(original,new)
+
+def withText():
+    pairs = []
+    jpgs = []
+    txts = []
+    for i,file in enumerate(files):
+        original = os.path.join(target_folder,file)
+        fname,ext = os.path.splitext(original)
+        if(ext=='.jpg'):
+            jpgs.append(file)
+        elif(ext=='.txt'):
+            txts.append(file)
+        else:
+            print("not supported ext: ",ext)
+
+    for jpgfile in jpgs:
+        for txtfile in txts:
+            fname1,ext1 = os.path.splitext(jpgfile)
+            fname2,ext2 = os.path.splitext(txtfile)
+            if(fname1==fname2):
+                pairs.append((jpgfile,txtfile))
+                break
+    
+    for i, pair in enumerate(pairs):
+        for file in pair:
+            original = os.path.join(target_folder,file)
+            fname,ext = os.path.splitext(original)
+            new = os.path.join(target_folder,'smpl_180501_{:03d}'+ext).format(i)
+            os.rename(original,new)
+withText()

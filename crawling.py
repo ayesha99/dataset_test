@@ -7,7 +7,7 @@ google_crawler = GoogleImageCrawler(
     storage={'root_dir':'./crawl_img'})
 
 filters = dict(
-    size='medium',
+    size='large',
     type='photo',
     
    # color='orange',
