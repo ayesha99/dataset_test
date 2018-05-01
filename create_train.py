@@ -61,5 +61,5 @@ def prepare_dataset_txt(dataset_dir):
     with open(train_set_path,'w') as txt:
         txt.writelines(train_set)
 
-#create_train_dir(dataset_folder)
+create_train_dir(dataset_folder)
 prepare_dataset_txt(dataset_folder)
