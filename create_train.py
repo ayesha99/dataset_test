@@ -1,6 +1,8 @@
 import os
 import re
+from shutil import copy2
 dataset_folder="./data/dataset1/"
+img_list_folder="./list_txt/"
 def main():
     files = os.listdir(dataset_folder)
     files.sort()
@@ -60,6 +62,12 @@ def prepare_dataset_txt(dataset_dir):
         txt.writelines(valid_set)
     with open(train_set_path,'w') as txt:
         txt.writelines(train_set)
+    
+    train_txt = os.path.join(dataset_dir,"train.txt")
+    copy2(test_set_path,img_list_folder)
+    copy2(valid_set_path,img_list_folder)
+    copy2(train_set_path,img_list_folder)
+    copy2(train_txt,img_list_folder)
 
 create_train_dir(dataset_folder)
 prepare_dataset_txt(dataset_folder)
