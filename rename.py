@@ -1,6 +1,6 @@
 import os
 
-target_folder = './data/0501_train/'
+target_folder = './data/0508_firetruck_train/'
 files = os.listdir(target_folder)
 
 def onlyImg():
@@ -8,7 +8,7 @@ def onlyImg():
 
         original = os.path.join(target_folder,file)
         fname,ext = os.path.splitext(original)
-        new = os.path.join(target_folder,'smpl_180501_{:03d}'+ext).format(i)
+        new = os.path.join(target_folder,'smpl_180508_{:03d}'+ext).format(i)
         os.rename(original,new)
 
 def withText():
@@ -18,9 +18,9 @@ def withText():
     for i,file in enumerate(files):
         original = os.path.join(target_folder,file)
         fname,ext = os.path.splitext(original)
-        if(ext=='.jpg'):
+        if(ext.lower()=='.jpg'):
             jpgs.append(file)
-        elif(ext=='.txt'):
+        elif(ext.lower()=='.txt'):
             txts.append(file)
         else:
             print("not supported ext: ",ext)
@@ -37,6 +37,6 @@ def withText():
         for file in pair:
             original = os.path.join(target_folder,file)
             fname,ext = os.path.splitext(original)
-            new = os.path.join(target_folder,'smpl_180501_{:03d}'+ext).format(i)
+            new = os.path.join(target_folder,'smpl_firetruck_180508_{:03d}'+ext).format(i)
             os.rename(original,new)
 withText()
