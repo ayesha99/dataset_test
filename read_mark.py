@@ -2,7 +2,7 @@ import os
 import re
 
 # copy marked image
-dir = './data/0501_original/'
+dir = './data/0518_walk/'
 files = os.listdir(dir)
 jpg_pattern = re.compile(".*.jpg")
 txt_pattern = re.compile(".*.txt")
@@ -17,7 +17,7 @@ for txt in txt_list:
     with open(txt_file) as f_txt:
         lines = f_txt.readlines()
         if(lines!=[]):
-            print(txt_file)
+            print(txt_file) #found non-empty mark file
             #ser = re.search('([^/]*).txt',txt_file)
             jpg_path = txt_file.replace(".txt",".jpg")
             exist_jpg = os.path.exists(jpg_path)
@@ -26,7 +26,7 @@ for txt in txt_list:
             pass
 
 from shutil import copy2    
-target_folder='data/0501_train/'
+target_folder='./data/0518_walk_train/'
 if( not os.path.exists(target_folder)):
     os.mkdir(target_folder)
 for pair in img_txt_pair:
@@ -35,7 +35,9 @@ for pair in img_txt_pair:
     print("copy:{}, {}".format(pair[0],pair[1]))
     
     
-
+import rename
+#rename files
+rename.withText(target_folder,"180518_walk")
 
 
     

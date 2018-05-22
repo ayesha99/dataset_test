@@ -1,9 +1,11 @@
 import os
 
-target_folder = './data/0508_firetruck_train/'
-files = os.listdir(target_folder)
+
+
 
 def onlyImg():
+    target_folder = './data/0509_deer_train/'
+    files = os.listdir(target_folder)
     for i,file in enumerate(files):
 
         original = os.path.join(target_folder,file)
@@ -11,10 +13,11 @@ def onlyImg():
         new = os.path.join(target_folder,'smpl_180508_{:03d}'+ext).format(i)
         os.rename(original,new)
 
-def withText():
+def withText(target_folder,infix):
     pairs = []
     jpgs = []
     txts = []
+    files = os.listdir(target_folder)
     for i,file in enumerate(files):
         original = os.path.join(target_folder,file)
         fname,ext = os.path.splitext(original)
@@ -37,6 +40,9 @@ def withText():
         for file in pair:
             original = os.path.join(target_folder,file)
             fname,ext = os.path.splitext(original)
-            new = os.path.join(target_folder,'smpl_firetruck_180508_{:03d}'+ext).format(i)
+            new = os.path.join(target_folder,'smpl_{}_{:03d}'+ext).format(infix,i)
             os.rename(original,new)
-withText()
+            print("rename:"+new)
+
+
+#withText('./data/0513_cat2_train/',"180513_cat2")
