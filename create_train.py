@@ -48,10 +48,10 @@ def prepare_dataset_txt(dataset_dir):
    
     test_set_ratio = 0.2
     random.shuffle(img_list)
-    test_set_cnt = min(int(test_set_ratio*len(img_list)),10)
+    test_set_cnt = min(int(test_set_ratio*len(img_list)),20)
     test_set = img_list[0:test_set_cnt-1]
     train_set = img_list[test_set_cnt:]
-    valid_set_cnt = min(len(train_set),10)
+    valid_set_cnt = min(len(train_set),20)
     valid_set = train_set[0:valid_set_cnt-1]
     test_set_path = os.path.join(dataset_dir,"test.txt")
     valid_set_path = os.path.join(dataset_dir,"train_valid.txt")
@@ -69,5 +69,7 @@ def prepare_dataset_txt(dataset_dir):
     copy2(train_set_path,img_list_folder)
     copy2(train_txt,img_list_folder)
 
-create_train_dir(dataset_folder)
-prepare_dataset_txt(dataset_folder)
+#create_train_dir(dataset_folder)
+#prepare_dataset_txt(dataset_folder)
+
+create_train_dir('./data/test_data/0620_train')
